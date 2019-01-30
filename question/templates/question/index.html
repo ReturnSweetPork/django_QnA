@@ -1,0 +1,10 @@
+    {% extends 'question/base.html' %}
+    {% block bodyblock %}
+    <h1>여기는 첫화면입니다 인덱스입니다.</h1>
+        {% for question in questions %}
+            <h3>{{question.title}}</h3>
+            <h3>{{question.content}}</h3>
+            <a href="/questions/{{question.id}}/">더보기</a>
+            <hr>
+        {% endfor %}
+    {% endblock %}
